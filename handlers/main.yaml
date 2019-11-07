@@ -1,0 +1,15 @@
+---
+- name: Gracefully test fail2ban configurations
+  command: fail2ban-server -t
+
+- name: Reload fail2ban-server
+  systemd:
+    name: fail2ban.service
+    state: reloaded
+    enabled: yes
+
+- name: Restart fail2ban-server
+  systemd:
+    name: fail2ban.service
+    state: restarted
+    enabled: yes

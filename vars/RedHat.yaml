@@ -1,0 +1,5 @@
+---
+__required_packages:
+  - git
+  - python2
+  - python2-devel

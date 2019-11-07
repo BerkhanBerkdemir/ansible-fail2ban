@@ -1,0 +1,55 @@
+---
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_os_family }}.yaml"
+
+- name: Ensure system dependencies are installed
+  package:
+    name: "{{ __required_packages | list }}"
+    state: present
+  tags:
+    - packages
+    - install
+
+- name: Check if fail2ban is installed
+  command: which fail2ban-server
+  changed_when: false
+  failed_when: false
+  register: fail2ban_already_installed
+  tags:
+    - install
+
+- name: Clone fail2ban repository
+  git:
+    repo: "{{ fail2ban_git_repo }}"
+    dest: /tmp/fail2ban
+    version: "{{ fail2ban_git_version }}"
+    depth: "{{ fail2ban_git_depth }}"
+  when: fail2ban_already_installed.rc != 0
+  tags:
+    - install
+
+- name: Run setup.py to install fail2ban
+  command: python2 setup.py install
+  args:
+    chdir: /tmp/fail2ban
+  register: fail2ban_install
+  changed_when: '"You can also install" not in fail2ban_install.stdout'
+  when: fail2ban_already_installed.rc != 0
+  tags:
+    - install
+
+- debug:
+    msg: "{{ fail2ban_install.stdout }}"
+    verbosity: 1
+
+- name: Ensure fail2ban.service is added as systemd service unit
+  template:
+    src: fail2ban.service.j2
+    dest: /usr/lib/systemd/system/fail2ban.service
+    mode: 0644
+  notify:
+    - Gracefully test fail2ban configurations
+    - Reload fail2ban-server
+  tags:
+    - configuration
+    - install

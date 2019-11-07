@@ -1,0 +1,6 @@
+# Ignore Python dependencies and cache directories
+__pycache__
+venv
+
+# Ignore logs
+*.log
