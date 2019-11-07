@@ -9,8 +9,8 @@ services:
 
 env:
   matrix:
-    - image="amazonlinux" tag="2"
-    - image="centos" tag="7"
-    - image="centos" tag="8"
+    - DOCKER_IMAGE="amazonlinux" DOCKER_TAG="2"
+    - DOCKER_IMAGE="centos" DOCKER_TAG="7"
+    - DOCKER_IMAGE="centos" DOCKER_TAG="8"
 
 script: molecule test
