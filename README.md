@@ -1,3 +1,4 @@
+[![Build Status][build-status-badge]][build-system]
 [![BSD-2-Clause][bsd-2-badge]](LICENSE)
 
 # ansible-fail2ban
@@ -45,4 +46,6 @@ passed in as parameters) is always nice for users too:
 | Ubuntu           | 16.04   | No     | -              | Yes     |
 | Ubuntu           | 18.04   | No     | -              | Yes     |
 
+[build-system]: https://travis-ci.org/BerkhanBerkdemir/ansible-fail2ban
+[build-status-badge]: https://travis-ci.org/BerkhanBerkdemir/ansible-fail2ban.svg?branch=master
 [bsd-2-badge]: https://img.shields.io/badge/license-BSD--2--Clause-green
