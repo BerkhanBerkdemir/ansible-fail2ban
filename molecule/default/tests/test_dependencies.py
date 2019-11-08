@@ -9,9 +9,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 @pytest.mark.parametrize("name", [
-    ("git"),
-    ("python2"),
-    ("python2-devel")
+    ("git")
 ])
 def test_packages(host, name):
     pkg = host.package(name)
