@@ -6,10 +6,10 @@
   systemd:
     name: fail2ban.service
     state: reloaded
-    enabled: yes
+    enabled: true
 
 - name: Restart fail2ban-server
   systemd:
     name: fail2ban.service
     state: restarted
-    enabled: yes
+    enabled: true

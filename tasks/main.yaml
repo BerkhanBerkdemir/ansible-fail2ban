@@ -4,7 +4,7 @@
 
 - name: Ensure system dependencies are installed
   package:
-    name: "{{ __required_packages | list }}"
+    name: "{{ __required_packages }}"
     state: present
   tags:
     - packages
