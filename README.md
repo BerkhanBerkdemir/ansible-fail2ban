@@ -13,7 +13,7 @@ with defined latest version and, of course, start the service.
 ## Requirements
 
 This role only requires Ansible and operating system that is stated in
-[Compatibility Chart](#compatibility-chart).
+[Compatibility Chart][compatibility-chart].
 
 ## Role Variables
 
@@ -30,22 +30,7 @@ passed in as parameters) is always nice for users too:
      - { role: ansible-fail2ban }
 ```
 
-## Compatibility Chart
-
-| Operating System | Release | Tested | Allow failures | Planned |
-| ---------------- | ------- | ------ | -------------- | ------- |
-| Amazon Linux     | 1       | No     | -              | -       |
-| Amazon Linux     | 2       | No     | -              | Yes     |
-| CentOS           | 6       | No     | -              | -       |
-| CentOS           | 7       | Yes    | No             | -       |
-| CentOS           | 8       | Yes    | No             | -       |
-| openSUSE         | 15.1    | No     | -              | Yes     |
-| Debian           | 8       | No     | -              | Yes     |
-| Debian           | 9       | No     | -              | Yes     |
-| Debian           | 10      | No     | -              | Yes     |
-| Ubuntu           | 16.04   | No     | -              | Yes     |
-| Ubuntu           | 18.04   | No     | -              | Yes     |
-
 [build-system]: https://travis-ci.org/BerkhanBerkdemir/ansible-fail2ban
 [build-status-badge]: https://travis-ci.org/BerkhanBerkdemir/ansible-fail2ban.svg?branch=master
 [bsd-2-badge]: https://img.shields.io/badge/license-BSD--2--Clause-green
+[compatibility-chart]: https://github.com/BerkhanBerkdemir/ansible-fail2ban/wiki/Compatibility-Chart
