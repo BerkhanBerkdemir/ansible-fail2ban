@@ -8,8 +8,8 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts('all')
 
 
-@pytest.mark.parametrize("name", [
-    ("git")
+@pytest.mark.parametrize('name', [
+    ('git')
 ])
 def test_packages(host, name):
     pkg = host.package(name)
