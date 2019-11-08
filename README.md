@@ -35,7 +35,7 @@ passed in as parameters) is always nice for users too:
 | Operating System | Release | Tested | Allow failures | Planned |
 | ---------------- | ------- | ------ | -------------- | ------- |
 | Amazon Linux     | 1       | No     | -              | -       |
-| Amazon Linux     | 2       | Yes    | No             | -       |
+| Amazon Linux     | 2       | No     | -              | Yes     |
 | CentOS           | 6       | No     | -              | -       |
 | CentOS           | 7       | Yes    | No             | -       |
 | CentOS           | 8       | Yes    | No             | -       |

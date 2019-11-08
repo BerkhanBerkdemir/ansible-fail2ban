@@ -9,7 +9,6 @@ services:
 
 env:
   matrix:
-    - DOCKER_IMAGE="amazonlinux" DOCKER_TAG="2"
     - DOCKER_IMAGE="centos" DOCKER_TAG="7"
     - DOCKER_IMAGE="centos" DOCKER_TAG="8"
 
