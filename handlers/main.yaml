@@ -1,6 +1,11 @@
 ---
 - name: Gracefully test fail2ban configurations
   command: fail2ban-server -t
+  register: fail2ban_conf_test
+  changed_when:
+    - '"OK" in fail2ban_conf_test.stdout'
+  failed_when:
+    - '"ERROR" in fail2ban_conf_test.stdout'
 
 - name: Reload fail2ban-server
   systemd:
