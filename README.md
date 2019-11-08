@@ -30,7 +30,13 @@ passed in as parameters) is always nice for users too:
      - { role: ansible-fail2ban }
 ```
 
+## Versioning
+
+We use [SemVer][semver] for versioning. For the versions available, see [the releases on this repository][project-releases].
+
 [build-system]: https://travis-ci.org/BerkhanBerkdemir/ansible-fail2ban
 [build-status-badge]: https://travis-ci.org/BerkhanBerkdemir/ansible-fail2ban.svg?branch=master
 [bsd-2-badge]: https://img.shields.io/badge/license-BSD--2--Clause-green
 [compatibility-chart]: https://github.com/BerkhanBerkdemir/ansible-fail2ban/wiki/Compatibility-Chart
+[semver]: https://semver.org
+[project-releases]: https://github.com/BerkhanBerkdemir/ansible-fail2ban/releases
